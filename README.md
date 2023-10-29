@@ -1,27 +1,49 @@
-# AngularRoutingExample
+# Exemplo de formularios e rotas com Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
+Para rodar o front basta executar o comando `ng serve` e acessar a url `http://localhost:4200/` no navegador.
 
-## Development server
+Para inciar o servidor basta executar o comando `node server.js`.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Comparativo com a solução em React
 
-## Code scaffolding
+#### Angular:
+```
+/
+|-- src/
+|   |-- app/
+|       |-- app-routing.module.ts
+|       |-- app.component.ts
+|       |-- app.module.ts
+|       |-- home/
+|           |-- home.component.html
+|           |-- home.component.css
+|           |-- home.component.ts
+|       |-- form/
+|           |-- form.component.html
+|           |-- form.component.css
+|           |-- form.component.ts
+|       |-- data.service.ts
+|   |-- server.js
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### React:
+```
+/
+|-- src/
+|   |-- components/
+|       |-- Home/
+|           |-- Home.js
+|           |-- Home.css
+|       |-- Form/
+|           |-- Form.js
+|           |-- Form.css
+|   |-- App.js
+|   |-- index.js
+|   |-- server.js
+```
 
-## Build
+#### Comparativo:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Ambos possuem uma estrutura bem parecida, com a diferença que o Angular possui um arquivo de rotas e um arquivo de serviço. Além de que no React os componentes só possuem um arquivo, enquanto no Angular eles possuem um arquivo para cada tipo de arquivo (html, css e ts). O Angular já usa como padrão o TypeScript, isso pode ser positivo ou negativo dependendo do ponto de vista, mas no geral é uma boa prática.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+O Angular embora tenha muitos arquivos para os componentes, ele tem um CLI que ajuda muito na criação de componentes, rotas, serviços, etc. O React não possui um CLI, mas existem ferramentas que ajudam na criação de componentes, como o `create-react-app`.
